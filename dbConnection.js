@@ -1,7 +1,7 @@
 const mysql = require("mysql2");
   
 const db_connection = async config => {   // [START cloud_sql_mysql_mysql_create_socket]
-  const dbSocketPath = process.env./cloudsql/test_net || '/cloudsql';
+  const dbSocketPath = process.env.DB_SOCKET_PATH || '/cloudsql';
 
   // Establish a connection to the database
   return mysql.createPool({
